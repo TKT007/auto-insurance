@@ -630,6 +630,37 @@ function nextStep() {
             }
 
         });
-    </script>		
+    </script>	
+
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+
+    const ctaButton = document.querySelector('.cta_btn.q2-btn');
+    
+    if (ctaButton) {
+        ctaButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+           
+            const originalUrl = this.href;
+            
+           
+            const urlParams = new URLSearchParams(window.location.search);
+            
+          
+            let finalUrl = originalUrl;
+            
+        
+            urlParams.forEach((value, key) => {
+                finalUrl += `&${key}=${value}`;
+            });
+            
+          
+            window.location.href = finalUrl;
+        });
+    }
+});
+</script>
+
 
     </body></html>
