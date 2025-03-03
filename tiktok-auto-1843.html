@@ -634,30 +634,63 @@ function nextStep() {
 
 <script>
 	document.addEventListener('DOMContentLoaded', function() {
-
-    const ctaButton = document.querySelector('btn btn-primary');
+    // Seleciona TODOS os botões com a classe 'btn btn-primary'
+    const ctaButtons = document.querySelectorAll('.btn.btn-primary');
     
-    if (ctaButton) {
-        ctaButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-           
-            const originalUrl = this.href;
-            
-           
-            const urlParams = new URLSearchParams(window.location.search);
-            
-          
-            let finalUrl = originalUrl;
-            
-        
-            urlParams.forEach((value, key) => {
-                finalUrl += `&${key}=${value}`;
+    // Verifica se encontrou botões
+    if (ctaButtons.length > 0) {
+        // Adiciona o evento de clique para cada botão
+        ctaButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                // Previne o comportamento padrão do link
+                e.preventDefault();
+                
+                // Pega o href original do botão
+                const originalUrl = this.href;
+                
+                // Obtém a função gtag_report_conversion original
+                const gtagFunction = this.getAttribute('onclick');
+                
+                // Executa a função gtag se existir
+                if (gtagFunction && typeof window[gtagFunction.replace('()', '')] === 'function') {
+                    try {
+                        window[gtagFunction.replace('()', '')]();
+                    } catch (error) {
+                        console.log('Erro ao executar função de conversão:', error);
+                    }
+                }
+                
+                // Obtém os parâmetros da URL atual
+                const urlParams = new URLSearchParams(window.location.search);
+                
+                // Cria a URL final começando com a URL original
+                let finalUrl = originalUrl;
+                
+                // Adiciona um '?' se a URL original não tiver parâmetros
+                // ou '&' se já tiver parâmetros
+                if (!finalUrl.includes('?')) {
+                    finalUrl += '?';
+                } else if (!finalUrl.endsWith('&') && !finalUrl.endsWith('?')) {
+                    finalUrl += '&';
+                }
+                
+                // Adiciona os parâmetros adicionais da URL atual
+                let firstParam = true;
+                urlParams.forEach((value, key) => {
+                    if (firstParam && finalUrl.endsWith('?')) {
+                        finalUrl += `${key}=${value}`;
+                        firstParam = false;
+                    } else {
+                        finalUrl += `&${key}=${value}`;
+                    }
+                });
+                
+                // Redireciona para a URL final
+                window.location.href = finalUrl;
             });
-            
-          
-            window.location.href = finalUrl;
         });
+    } else {
+        console.log('Nenhum botão encontrado com a classe "btn btn-primary"');
     }
 });
 </script>
