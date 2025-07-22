@@ -8,6 +8,70 @@
 
   gtag('config', 'AW-11458265809');
 </script>
+	<script data-obct type="text/javascript">
+  /** DO NOT MODIFY THIS CODE**/
+  !function(_window, _document) {
+    var OB_ADV_ID = '00b9446eb1f2cea33165233c7697ca286b';
+    if (_window.obApi) {
+      var toArray = function(object) {
+        return Object.prototype.toString.call(object) === '[object Array]' ? object : [object];
+      };
+      _window.obApi.marketerId = toArray(_window.obApi.marketerId).concat(toArray(OB_ADV_ID));
+      return;
+    }
+    var api = _window.obApi = function() {
+      api.dispatch ? api.dispatch.apply(api, arguments) : api.queue.push(arguments);
+    };
+    api.version = '1.1';
+    api.loaded = true;
+    api.marketerId = OB_ADV_ID;
+    api.queue = [];
+    var tag = _document.createElement('script');
+    tag.async = true;
+    tag.src = '//amplify.outbrain.com/cp/obtp.js';
+    tag.type = 'text/javascript';
+    var script = _document.getElementsByTagName('script')[0];
+    script.parentNode.insertBefore(tag, script);
+  }(window, document);
+  
+  // Tracking de page view (já existente)
+  obApi('track', 'PAGE_VIEW');
+  
+  // Função para disparar evento de lead
+  function trackLead(leadValue) {
+    obApi('track', 'LEAD', {
+      value: leadValue || 0, // Valor do lead (opcional)
+    });
+  }
+  
+  // Exemplo de como disparar o evento de lead
+  // Chame esta função quando o lead for gerado (ex: formulário enviado)
+  // trackLead(100); // Valor do lead em reais
+</script>
+
+<!-- COMO USAR: -->
+<!-- Para disparar o evento de lead, chame a função quando necessário: -->
+<script>
+// Exemplo 1: Lead simples sem valor
+// trackLead();
+
+// Exemplo 2: Lead com valor específico
+// trackLead(150);
+
+// Exemplo 3: Disparar quando um formulário for enviado
+/*
+document.getElementById('meuFormulario').addEventListener('submit', function(e) {
+  trackLead(200); // Lead de R$ 200
+});
+*/
+
+// Exemplo 4: Disparar após uma ação específica (botão clicado, etc.)
+/*
+document.getElementById('botaoLead').addEventListener('click', function() {
+  trackLead(100);
+});
+*/
+</script>
 <!--Optional, send client hints to get accurate device data-->
 <meta http-equiv="delegate-ch" content="sec-ch-ua https://fb.track-conv.shop; sec-ch-ua-mobile https://fb.track-conv.shop; sec-ch-ua-arch https://fb.track-conv.shop; sec-ch-ua-model https://fb.track-conv.shop; sec-ch-ua-platform https://fb.track-conv.shop; sec-ch-ua-platform-version https://fb.track-conv.shop; sec-ch-ua-bitness https://fb.track-conv.shop; sec-ch-ua-full-version-list https://fb.track-conv.shop; sec-ch-ua-full-version https://fb.track-conv.shop" />
 
