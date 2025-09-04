@@ -1,34 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get A Lower Rate</title>
-    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
         
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #ffffff;
+            background-color: #f3f4f4;
             color: #000000;
             line-height: 1.6;
             overflow-x: hidden;
+            position: relative;
         }
         
-        .page-container {
+        .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            position: relative;
         }
         
         .header {
             text-align: center;
-            padding: 30px 0;
+            padding: 40px 0;
+            background-color: #ffffff;
+            border-bottom: 1px solid #e0e0e0;
         }
         
         .main-heading {
@@ -39,23 +42,35 @@
             color: #000;
         }
         
+        .main-heading span {
+            color: #e92f4d;
+        }
+        
         .sub-heading {
             font-size: 28px;
             font-weight: 400;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             color: #000;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
-        .question-section {
-            text-align: center;
-            margin: 40px 0;
+        .content {
+            background-color: #ffffff;
+            padding: 40px 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin: 30px 0;
         }
         
         .question {
             font-size: 45px;
             font-weight: 900;
             color: #212529;
+            text-align: center;
             margin-bottom: 40px;
+            line-height: 1.2;
         }
         
         .age-buttons {
@@ -71,7 +86,7 @@
             color: white;
             border: none;
             border-radius: 5px;
-            padding: 15px 30px;
+            padding: 18px 30px;
             font-size: 24px;
             font-weight: 700;
             cursor: pointer;
@@ -80,7 +95,7 @@
             text-decoration: none;
             display: inline-block;
             text-align: center;
-            min-width: 180px;
+            min-width: 200px;
         }
         
         .age-button:hover {
@@ -95,20 +110,24 @@
             font-size: 20px;
             font-weight: 700;
             color: #000;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
         }
         
         .footer {
             margin-top: 60px;
             text-align: center;
-            padding: 20px;
-            border-top: 1px solid #eee;
+            padding: 30px 20px;
+            background-color: #ffffff;
+            border-top: 1px solid #e0e0e0;
         }
         
         .footer-links {
             display: flex;
             justify-content: center;
             gap: 30px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         
         .footer-link {
@@ -120,41 +139,19 @@
         .footer-text {
             font-size: 16px;
             color: #000;
-            margin-bottom: 10px;
-            max-width: 800px;
+            margin-bottom: 15px;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.5;
+        }
+        
+        .footer-text.small {
+            font-size: 14px;
+            margin-top: 20px;
         }
         
         @media (max-width: 768px) {
-            .main-heading {
-                font-size: 41px;
-            }
-            
-            .sub-heading {
-                font-size: 25px;
-            }
-            
-            .question {
-                font-size: 38px;
-            }
-            
-            .age-button {
-                font-size: 24px;
-                padding: 12px 20px;
-                min-width: 160px;
-            }
-            
-            .age-buttons {
-                gap: 15px;
-            }
-            
-            .disclaimer {
-                font-size: 18px;
-            }
-        }
-        
-        @media (max-width: 480px) {
             .main-heading {
                 font-size: 36px;
             }
@@ -169,25 +166,49 @@
             
             .age-button {
                 font-size: 20px;
-                padding: 10px 15px;
-                min-width: 140px;
+                padding: 15px 20px;
+                min-width: 160px;
             }
             
             .footer-links {
                 flex-direction: column;
-                gap: 10px;
+                gap: 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .main-heading {
+                font-size: 28px;
+            }
+            
+            .sub-heading {
+                font-size: 18px;
+            }
+            
+            .question {
+                font-size: 26px;
+            }
+            
+            .age-button {
+                font-size: 18px;
+                padding: 12px 15px;
+                min-width: 140px;
+            }
+            
+            .disclaimer {
+                font-size: 16px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="page-container">
+    <div class="container">
         <div class="header">
-            <h1 class="main-heading">My Insurance Went From <span style="color: #e92f4d;">$179 to $39</span> Thanks To This Website!</h1>
+            <h1 class="main-heading">My Insurance Went From <span>$179 to $39</span> Thanks To This Website!</h1>
             <p class="sub-heading">Answer A Few Simple Questions And You Could Slash Your Car Insurance Rate As Much As $710 — Takes Less Than 60 Seconds And It's Free To Check!</p>
         </div>
         
-        <div class="question-section">
+        <div class="content">
             <h2 class="question">What's Your Age Range?</h2>
             <div class="age-buttons">
                 <a href="#age-18-34" class="age-button">18 to 34</a>
@@ -196,10 +217,8 @@
                 <a href="#age-55-64" class="age-button">55 to 64</a>
                 <a href="#age-65-plus" class="age-button">65+</a>
             </div>
-        </div>
-        
-        <div class="disclaimer">
-            *YOU MUST ALREADY BE INSURED TO APPLY!
+            
+            <p class="disclaimer">*YOU MUST ALREADY BE INSURED TO APPLY!</p>
         </div>
         
         <div class="footer">
@@ -208,7 +227,8 @@
                 <a href="https://lifesdailydeals.info/privacy-policy" class="footer-link">Privacy Policy</a>
             </div>
             <p class="footer-text">This site is not a part of the Facebook website or Facebook Inc. This site is not endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
-            <p class="footer-text">This page is an advertorial and is not a consumer protection update. The story told here is for demonstration purposes only and results may vary. Our intention is to provide an online resource that is both informative and helpful. We are not affiliated with any news source. The website and the company that owns it is not responsible for any typographical or photographic errors. All trademarks, logos, and service marks displayed are registered or unregistered trademarks of their respective owners. Clarification of headlines referencing "new rules." A "rule" is defined as a "piece of advice about the best way to do something" by Merriam-Webster's Dictionary. Contents of the site are copyrighted and property of the review or this site. Receiving multiple quotes from comparison sites can give you access to the most competitive rates in your local area.</p>
+            <p class="footer-text">This page is an advertorial and is not a consumer protection update. The story told here is for demonstration purposes only and results may vary. Our intention is to provide an online resource that is both informative and helpful. We are not affiliated with any news source. The website and the company that owns it is not responsible for any typographical or photographic errors.</p>
+            <p class="footer-text small">All trademarks, logos, and service marks displayed are registered or unregistered trademarks of their respective owners. Clarification of headlines referencing "new rules." A "rule" is defined as a "piece of advice about the best way to do something" by Merriam-Webster's Dictionary. Contents of the site are copyrighted and property of the review or this site. Receiving multiple quotes from comparison sites can give you access to the most competitive rates in your local area.</p>
         </div>
     </div>
 
