@@ -8,33 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/slick.css">
     
-    <script>
-      var part1, part2, hostname;
-
-      function formatParameter() {
-        hostname = window.location.hostname.split('.').slice(-2).join('.');
-        const urlParams = new URLSearchParams(window.location.search);
-        const tParam = urlParams.get('t');
-        
-        if (!tParam) {
-            document.addEventListener('DOMContentLoaded', function() {
-                const logoElements = document.querySelectorAll('.logo, .logo2');
-                logoElements.forEach(function(element) {
-                    element.style.display = 'none';
-                });
-            });
-            part1 = 'SaveMax';
-            part2 = 'Auto';
-            return;
-        }
-        
-        const parts = tParam.split('-');
-        
-        part1 = parts.slice(0, parts.length - 1).join('');
-        part2 = parts[parts.length - 1];
-      }
-      formatParameter();
-    </script>
+   
 </head>
 
 <body>
@@ -70,8 +44,8 @@
             <div class="banner__box_bottom">
               <h1>Are You Currently Insured?</h1>
               <div class="banner__button_box">
-                <div class="anc"><a class="banner__button" href="#">Yes</a></div>
-                <div class="anc"><a class="banner__button" href="#">No</a></div>
+                <div class="anc"><a class="banner__button" href="https://fb.track-conv.shop/click">Yes</a></div>
+                <div class="anc"><a class="banner__button" href="https://fb.track-conv.shop/click">No</a></div>
               </div>
             </div>
             <p class="banner__secure">
