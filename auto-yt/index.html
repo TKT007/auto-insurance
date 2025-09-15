@@ -1,78 +1,61 @@
-
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auto Insurance</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/slick.css">
-    <!-- cro -->
-    <script async="" src="https://www.clarity.ms/tag/pqvzkixpuy"></script><script type="text/javascript">
-      (function (c, l, a, r, i, t, y) {
-        c[a] =
-          c[a] ||
-          function () {
-            (c[a].q = c[a].q || []).push(arguments);
-          };
-        t = l.createElement(r);
-        t.async = 1;
-        t.src = "https://www.clarity.ms/tag/" + i;
-        y = l.getElementsByTagName(r)[0];
-        y.parentNode.insertBefore(t, y);
-      })(window, document, "clarity", "script", "pqvzkixpuy");
+    
+    <script>
+      var part1, part2, hostname;
+
+      function formatParameter() {
+        hostname = window.location.hostname.split('.').slice(-2).join('.');
+        const urlParams = new URLSearchParams(window.location.search);
+        const tParam = urlParams.get('t');
+        
+        if (!tParam) {
+            document.addEventListener('DOMContentLoaded', function() {
+                const logoElements = document.querySelectorAll('.logo, .logo2');
+                logoElements.forEach(function(element) {
+                    element.style.display = 'none';
+                });
+            });
+            part1 = 'SaveMax';
+            part2 = 'Auto';
+            return;
+        }
+        
+        const parts = tParam.split('-');
+        
+        part1 = parts.slice(0, parts.length - 1).join('');
+        part2 = parts[parts.length - 1];
+      }
+      formatParameter();
     </script>
-<script>
-  var part1, part2,hostname;
+</head>
 
-function formatParameter() {
-  hostname = window.location.hostname.split('.').slice(-2).join('.');
-  const urlParams = new URLSearchParams(window.location.search);
-  const tParam = urlParams.get('t');
-  
-  if (!tParam) {
-      document.addEventListener('DOMContentLoaded', function() {
-          const logoElements = document.querySelectorAll('.logo, .logo2');
-          logoElements.forEach(function(element) {
-              element.style.display = 'none';
-          });
-      });
-      part1 = 'SaveMax';
-      part2 = 'Auto';
-      return;
-  }
-  
-  const parts = tParam.split('-');
-  
-  part1 = parts.slice(0, parts.length - 1).join('');
-  part2 = parts[parts.length - 1];
-  
-  console.log("Original parameter:", tParam);
-  console.log("part1 =", part1);
-  console.log("part2 =", part2);
-}
-formatParameter();
-</script>
-  </head>
-
-  <body>
+<body>
     <div class="wrapper">
-<!--------TOP-STRIP-------->
-<div class="top_strip">
-	<div class="container">
-        <!-- SaveMaxHomes Desktop mode -->
-        <p class="logo">
-            <span class="black"><script>document.write(part1 || 'SaveMax');</script>AutoQuote</span><span class="blue"><script>document.write(part2 || 'Auto');</script>Pilot</span>
-        </p>
-        <p class="top__strip_text">
-            <span><em id="dynamic-number">59,718</em> Americans Saved On Auto Insurance <img src="images/review-faces.png" alt="faces" width="300" height="73"></span>
-        </p>
-    </div>
-</div>
+      <!--------TOP-STRIP-------->
+      <div class="top_strip">
+        <div class="container">
+            <!-- SaveMaxHomes Desktop mode -->
+            <p class="logo">
+                <span class="black"><script>document.write(part1 || 'SaveMax');</script>AutoQuote</span><span class="blue"><script>document.write(part2 || 'Auto');</script>Pilot</span>
+            </p>
+            <p class="top__strip_text">
+                <span><em id="dynamic-number">59,718</em> Americans Saved On Auto Insurance <img src="images/review-faces.png" alt="faces" width="300" height="73"></span>
+            </p>
+        </div>
+      </div>
 
- <!-- SaveMaxHomes Mobile mode -->
- <p class="logo2">
-    <span class="black"><script>document.write(part1 || 'SaveMax');</script>AutoQuote</span><span class="blue"><script>document.write(part2 || 'Auto');</script>Pilot</span>
-</p>
+      <!-- SaveMaxHomes Mobile mode -->
+      <p class="logo2">
+          <span class="black"><script>document.write(part1 || 'SaveMax');</script>AutoQuote</span><span class="blue"><script>document.write(part2 || 'Auto');</script>Pilot</span>
+      </p>
 
       <!--------BANNER-------->
       <div class="banner" id="banner">
@@ -87,8 +70,8 @@ formatParameter();
             <div class="banner__box_bottom">
               <h1>Are You Currently Insured?</h1>
               <div class="banner__button_box">
-                <div class="anc"><a class="banner__button" href="https://t.drivepolicypro.com/lc?t=Auto-Quote-Pilot&cid=545a8496-ba1f-46b8-aff8-c71aa53d1b9f&lid=OX1rP4&d=dC5hdXRvcXVvdGVwaWxvdC5jb20%3D&fid=7bKk2X&pmclid=545a8496-ba1f-46b8-aff8-c71aa53d1b9f&gclid=CjwKCAjwz5nGBhBBEiwA-W6XRAGq0UK5uzUPLSrfNgoR25UWSXFJw6lNsQs3KJMx8loBMW912DhtGhoCzdIQAvD_BwE">Yes</a></div>
-                <div class="anc"><a class="banner__button" href="https://t.drivepolicypro.com/lc?t=Auto-Quote-Pilot&cid=545a8496-ba1f-46b8-aff8-c71aa53d1b9f&lid=OX1rP4&d=dC5hdXRvcXVvdGVwaWxvdC5jb20%3D&fid=7bKk2X&pmclid=545a8496-ba1f-46b8-aff8-c71aa53d1b9f&gclid=CjwKCAjwz5nGBhBBEiwA-W6XRAGq0UK5uzUPLSrfNgoR25UWSXFJw6lNsQs3KJMx8loBMW912DhtGhoCzdIQAvD_BwE">No</a></div>
+                <div class="anc"><a class="banner__button" href="#">Yes</a></div>
+                <div class="anc"><a class="banner__button" href="#">No</a></div>
               </div>
             </div>
             <p class="banner__secure">
@@ -198,7 +181,7 @@ formatParameter();
         <div class="container">
           <p class="common_heading">Customer Reviews</p>
           <p class="s2_text">
-            Real feedback from real drivers. Learn how we’ve helped our
+            Real feedback from real drivers. Learn how we've helped our
             customers save on auto insurance.
           </p>
 
@@ -213,7 +196,7 @@ formatParameter();
               <div class="testi_name_box">
                 <img src="images/t-img1.jpg" class="t-img" width="57" height="57" alt="img">
                 <p class="t-name">
-                  Grace K<span><img src="images/t-chk.png" class="t-chk" alt="chk">Verified Buyer</span>
+                  Grace K<span>Verified Buyer</span>
                 </p>
               </div>
             </div>
@@ -228,7 +211,7 @@ formatParameter();
               <div class="testi_name_box">
                 <img src="images/t-img2.jpg" class="t-img" width="57" height="57" alt="img">
                 <p class="t-name">
-                  Emily B.<span><img src="images/t-chk.png" class="t-chk" alt="chk">Verified Buyer</span>
+                  Emily B.<span>Verified Buyer</span>
                 </p>
               </div>
             </div>
@@ -243,7 +226,7 @@ formatParameter();
               <div class="testi_name_box">
                 <img src="images/t-img3.jpg" class="t-img" width="57" height="57" alt="img">
                 <p class="t-name">
-                  Amy I.<span><img src="images/t-chk.png" class="t-chk" alt="chk">Verified Buyer</span>
+                  Amy I.<span>Verified Buyer</span>
                 </p>
               </div>
             </div>
@@ -252,53 +235,18 @@ formatParameter();
       </div>
 
       <!--Footer-->
-
       <div class="footer">
         <div class="container">
             <p class="footer-text">Disclaimer: <script>document.write(hostname);</script>fastquote.pro is a top savings referral service which enables consumers to quickly and easily request multiple competitive insurance quotes from optimally selected local insurance agents and companies using our proprietary consumer alignment technology. We do not provide insurance and we do not represent any specific insurance provider.
                 Please note that lowest listed rates and potential savings may not be representative or available from all companies. <script>document.write(hostname);</script>fastquote.pro matches users to advertisers and insurance agents only after we've received certain information from you, and your actual rates and savings will vary based on your location, coverage limits, deductibles, driving records, type of vehicle, affiliations, and many other variables.</p>
-            <p class="footer-text"><a href="../privacy/index.html">Privacy Policy</a> | <a href="../terms/index.html">Terms Of Use</a> | <script>
-                document.write('contact@' + hostname);
-            </script>contact@fastquote.pro |
-            <script> document.write(hostname);
-            </script>fastquote.pro 74 E Glenwood Ave Smyrna, DE 19977</p>
-        
+            <p class="footer-text"><a href="../privacy/index.html">Privacy Policy</a> | <a href="../terms/index.html">Terms Of Use</a> | 
+            <script> document.write(hostname);</script>fastquote.pro 74 E Glenwood Ave Smyrna, DE 19977</p>
         </div>
-    </div>
+      </div>
     </div>
 
     <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="js/slick.js"></script>
-
-    <script type="text/javascript">
-      var buttons = document.getElementsByClassName("anc");
-      var searchParams = new URLSearchParams(window.location.search);
-      var cid = searchParams.get("cid");
-      var lid = searchParams.get("lid");
-      var fid = searchParams.get("fid");
-      if (cid && lid && fid) {
-        var pixel = document.createElement("img");
-        pixel.src = `https://t.drivepolicypro.com/lv?cid=${cid}&lid=${lid}&fid=${fid}`;
-        pixel.alt = "pixel";
-        pixel.style.display = "none";
-        document.body.appendChild(pixel);
-      }
-
-      var anchorText = ["Yes", "No"];
-      var urlToGo = new URL("https://t.drivepolicypro.com/lc");
-      urlToGo.search = searchParams.toString();
-      for (let i = 0; i < buttons.length; i++) {
-        while (buttons[i].firstChild) {
-          buttons[i].removeChild(buttons[i].firstChild);
-        }
-
-        var link = document.createElement("a");
-        link.className = "banner__button";
-        link.href = urlToGo;
-        link.textContent = anchorText[i];
-        buttons[i].appendChild(link);
-      }
-    </script><img src="https://t.drivepolicypro.com/lv?cid=545a8496-ba1f-46b8-aff8-c71aa53d1b9f&lid=OX1rP4&fid=7bKk2X" alt="pixel" style="display: none;">
 
     <script type="text/javascript">
       $(document).ready(function () {
@@ -329,8 +277,8 @@ formatParameter();
           ],
         });
       });
+      
       //COUNTRY PLACE FUNCTION
-
       var i = 0;
       var country_counter = 1;
       var country_count = 66;
@@ -620,6 +568,7 @@ formatParameter();
           "</td></tr>"
       );
       var datapoint_counter = 1;
+      
       function move() {
         if (country_count > 1) {
           var id3 = setInterval(add_country, 1000);
@@ -643,7 +592,6 @@ formatParameter();
                 "</td></tr>"
             );
             $(".table-height").animate({ scrollTop: 100000 }, 1500);
-            //$('#county_place_outter').animate({ scrollTop: 1000000 }, 1000);
             country_counter++;
 
             setTimeout(function () {
@@ -653,6 +601,7 @@ formatParameter();
         }
       }
     </script>
+    
     <script>
       function updateNumber() {
         const startNumber = 30000;
@@ -680,17 +629,5 @@ formatParameter();
       // Update the number every minute (60000 milliseconds)
       setInterval(updateNumber, 60000);
     </script>
-    <script type="application/javascript">
-      function getIP(json) {
-        if (json && json.region) {
-          const title1 = "repAmer";
-          document.getElementById(title1).innerHTML = document
-            .getElementById(title1)
-            .innerHTML.replace(/America/g, json.region.toUpperCase());
-        }
-      }
-    </script>
-
-  
-
-</body></html>
+</body>
+</html>
